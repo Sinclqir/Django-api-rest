@@ -1,0 +1,7 @@
+from rest_framework import viewsets
+from rest_framework.serializers import ConcessionnaireSerializer
+from .models import Concessionnaire
+
+class ConcessionnaireViewSet(viewsets.ModelViewSet):
+    queryset = Concessionnaire.objects.all()
+    serializer_class = ConcessionnaireSerializer
